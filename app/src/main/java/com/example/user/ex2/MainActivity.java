@@ -57,6 +57,19 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Log.i(MyApp.MY_TAG, "Main: onSaveInstanceState event");
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        Log.i(MyApp.MY_TAG, "Main: onRestoreInstanceState event");
+    }
+
     public void displayMessage(View view){
         pressCounter++;
         button = (Button)findViewById(R.id.button2);
@@ -66,12 +79,12 @@ public class MainActivity extends AppCompatActivity {
         if(text.isEmpty())
         {
             message =getResources().getString(R.string.emptyName);
-            Toast.makeText(this, message,Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, String.format(message,pressCounter),Toast.LENGTH_SHORT).show();
         }
         else
         {
             message = getResources().getString(R.string.Name1);
-            String s1 = String.format(message, text);
+            String s1 = String.format(message, pressCounter,text);
             Toast.makeText(this, s1,Toast.LENGTH_SHORT).show();
         }
     }
