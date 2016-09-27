@@ -7,7 +7,7 @@ import android.util.Log;
  * Created by User on 9/23/2016.
  */
 public class MyApp extends Application{
-    public final static String MY_TAG = "MyApp: ";
+    public final static String MY_TAG = "MyApp";
     @Override
     public void onCreate() {
         super.onCreate();

@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Ex2</string>
+    <string name="intro">this exercise demonstrates the:\n activity life-cycle callback methods,\n views referecing.\n and on-click handler</string>
+    <string name="button">Try me!</string>
+    <string name="name">Name:</string>
+    <string name="emptyName">[%d] Wait! you should first enter your name above</string>
+    <string name="Name1">[%d] welcome %s, this is your first java coding experince in Android. congraluation!!!</string>
 </resources>

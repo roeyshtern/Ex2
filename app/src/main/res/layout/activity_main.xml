@@ -12,5 +12,47 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:textSize="25sp"
+        android:text="@string/intro"
+        android:id="@+id/textView" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/textView"
+        android:id="@+id/linear"
+        android:layout_centerHorizontal="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            android:id="@+id/button"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText"
+            android:hint="enter here your first name"
+            android:layout_alignBottom="@+id/button"
+            android:layout_toEndOf="@+id/button" />
+
+
+
+
+    </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button"
+        android:onClick="displayMessage"
+        android:id="@+id/button2"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/linear" />
+
+
 </RelativeLayout>
