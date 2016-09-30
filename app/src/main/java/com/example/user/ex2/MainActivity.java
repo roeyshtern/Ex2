@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    final String KEY_COUNT = "count";
     Button button;
     private int pressCounter;
     EditText editText;
@@ -62,11 +63,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         Log.i(MyApp.MY_TAG, "Main: onSaveInstanceState event");
+        outState.putInt(KEY_COUNT, this.pressCounter);
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
+        if(savedInstanceState!=null)
+        {
+            this.pressCounter = savedInstanceState.getInt(KEY_COUNT, 0);
+        }
         Log.i(MyApp.MY_TAG, "Main: onRestoreInstanceState event");
     }
 
